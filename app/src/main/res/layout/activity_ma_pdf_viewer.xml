@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout tools:context=".MA_PdfViewer"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/ma_rootLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ma_tb_screen"
+        android:textOff="Record"
+        android:layout_alignParentRight="true"
+        android:textOn="Stop"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ma_whileboard"
+        android:text="White Board"
+        android:layout_alignParentLeft="true"
+
+        android:textOn="Stop"
+        />
+<!--    <com.codinginflow.in.MA_CanvasView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:id="@+id/canvas"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:background="@color/opaque_back"-->
+<!--        />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ma_tb_pen"
+        android:text="pen"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR CANVAS!"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="clearCanvas"
+
+        android:id="@+id/button"
+        />
+    <!--        android:layout_alignParentB="true"-->
+
+    <VideoView
+        android:layout_above="@+id/ma_tb_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ma_videoView"
+        android:visibility="invisible"/>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/ma_pdfView"
+        />
+
+
+</RelativeLayout>
