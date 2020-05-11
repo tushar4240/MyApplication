@@ -170,23 +170,22 @@ public class MA_PdfViewer extends AppCompatActivity implements OnPageChangeListe
         ////////////////////////////
 
 
-        String filepath=getIntent().getStringExtra("uri");
+     //   String filepath=getIntent().getStringExtra("uri");
         pdfFileName=getIntent().getStringExtra("name");
 
-        File file=new File(filepath);     //crash karri h is line pa ,ok dekhte h, path dikkat h vo, m debug karunga, pdf select karna phn se
-
-
-
-    pdfView.fromFile(file)
-            .defaultPage(pageNumber)
-            .enableSwipe(true)
-            .swipeHorizontal(false)
-            .onPageChange(this)
-            .enableAnnotationRendering(true)
-            .onLoad(this)
-            .scrollHandle(new DefaultScrollHandle(this))
-            .load();
-
+       // File file=new File(filepath);     //crash karri h is line pa ,ok dekhte h, path dikkat h vo, m debug karunga, pdf select karna phn se
+        String s="abc";
+        String urifile=getIntent().getStringExtra("urifile");
+        Uri myUri = Uri.parse(urifile);
+        pdfView.fromUri(myUri)
+                .defaultPage(pageNumber)
+                .enableSwipe(true)
+                .swipeHorizontal(false)
+                .onPageChange(this)
+                .enableAnnotationRendering(true)
+                .onLoad(this)
+                .scrollHandle(new DefaultScrollHandle(this))
+                .load();
         Toast.makeText(this,"Pdf Viewer",Toast.LENGTH_LONG).show();
 
 
